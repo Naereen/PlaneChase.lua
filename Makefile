@@ -5,7 +5,7 @@ build_lovezip:
 build_lovejs:
 	# npx love.js [options] <input> <output>
 	npx love.js --compatibility --title "Plane Chase for Magic the Gathering ~ By Elliot & Lilian" --memory 70000000 ./PlaneChase.love www/
-	# git restore www/index.html
+	git restore www/index.html
 
 test_lovejs:
 	firefox http://localhost:8910/ &
