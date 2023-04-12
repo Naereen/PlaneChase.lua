@@ -12,13 +12,13 @@ function love.load()
     love.graphics.setBackgroundColor(1, 1, 1)
     love.math.setRandomSeed(os.time())
 
-    -- Get all the images in the images/opca-/ directory
-    local files = love.filesystem.getDirectoryItems("images/opca-")
+    -- Get all the images in the images/planes/ directory
+    local files = love.filesystem.getDirectoryItems("images/planes")
     images = {}
     for _, image in ipairs(files) do
         print("Loading", image)
-        if isJpg(image) then
-            table.insert(images, love.graphics.newImage("images/opca-/" .. image))
+        if isJPG(image) or isPNG(image) then
+            table.insert(images, love.graphics.newImage("images/planes/" .. image))
         end
     end
     if #images > 0 then
@@ -81,8 +81,13 @@ function love.keypressed(key)
 end
 
 -- Tiny fonction, to check if a given filename ends with ".jpg"
-function isJpg(filename)
+function isJPG(filename)
     return string.sub(filename, -4) == ".jpg"
+end
+
+-- Tiny fonction, to check if a given filename ends with ".png"
+function isPNG(filename)
+    return string.sub(filename, -4) == ".png"
 end
 
 -- Go visit a new random plane, possibly the same
