@@ -17,7 +17,8 @@ function love.load()
     images = {}
     for _, image in ipairs(files) do
         print("Loading", image)
-        if isJPG(image) or isPNG(image) then
+        -- if isJPG(image) or isPNG(image) then
+        if isJPG(image) then
             table.insert(images, love.graphics.newImage("images/planes/" .. image))
         end
     end
