@@ -65,6 +65,7 @@ function love.keypressed(key)
         if #images > 0 then
             imagePrecedente = imageActuelle
             imageActuelle = getRandomPlaneImage()
+            die = "rien"
         end
     end
     if key == "left" then
@@ -74,6 +75,7 @@ function love.keypressed(key)
             local tmp = imagePrecedente
             imagePrecedente = imageActuelle
             imageActuelle = tmp
+            die = "rien"
         end
     end
     if key == "space" then
