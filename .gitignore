@@ -1,5 +1,6 @@
 # Node modules, for love.js
 node_modules/
+README.html
 
 # Configuration for VSCode
 .vscode/
