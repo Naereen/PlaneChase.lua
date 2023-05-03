@@ -16,8 +16,9 @@ jobs:
         with:
           name: planechase_love_package
           path: ./PlaneChase.love
-      - uses: AButler/upload-release-assets@v2.0
+      - uses: AButler/upload-release-assets@v2.0.2
         with:
           files: './PlaneChase.love'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
- 
+          release-tag: v0.1
+          
