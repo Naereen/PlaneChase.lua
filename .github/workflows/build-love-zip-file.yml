@@ -19,6 +19,6 @@ jobs:
       - uses: AButler/upload-release-assets@v2.0
         with:
           files: './PlaneChase.love'
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.MY_SECRET_NAME }}
           release-tag: v0.1
           
