@@ -4,7 +4,7 @@
 #
 
 build_lovezip:
-	zip -r PlaneChase.zip ./*.lua ./*.ttf ./README ./LICENSE ./images
+	zip -r PlaneChase.zip ./*.lua ./*.ttf ./README.md ./LICENSE ./images
 	mv -vf PlaneChase.zip PlaneChase.love
 
 build_lovejs:	build_lovezip
