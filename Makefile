@@ -20,3 +20,7 @@ send_zamok:
 	rsync --exclude=.git --ipv4 --verbose --times --perms --compress --human-readable --progress --archive ./www/ besson@zamok.crans.org:~/www/publis/PlaneChase.lua/
 	firefox https://perso.crans.org/besson/publis/PlaneChase.lua/
 	# rsync --exclude=.git --ipv4 --verbose --times --perms --compress --human-readable --progress --archive ./PlaneChase.love besson@zamok.crans.org:~/www/publis/PlaneChase.lua/
+
+#install_dependencies:
+#	# sudo apt install nodejs npm
+#	# npm install npx love.js
