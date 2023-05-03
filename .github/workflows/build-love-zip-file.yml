@@ -1,5 +1,5 @@
 name: build-love-zip-file
-run-name: Build and upload the PlaneChase.love file
+run-name: Build and upload the PlaneChase.love file to latest release
 on: [push]
 jobs:
   build-love-zip-file:
@@ -11,14 +11,23 @@ jobs:
         with:
           build-list:   ./LICENSE ./README.md ./DejaVuSans.ttf ./images/ ./conf.lua ./main.lua
           package-path: ./PlaneChase.love
-      - name: Upload core love package
-        uses: actions/upload-artifact@v3
+      # - name: Upload core love package as artefact below (for debug)
+      #  uses: actions/upload-artifact@v3
+      #  with:
+      #    name: PlaneChase.love
+      #    path: ./PlaneChase.love
+      # - name: Upload the PlaneChase.love file to latest release
+      #   uses: AButler/upload-release-assets@v2.0
+      #   with:
+      #     files: './PlaneChase.love'
+      #     repo-token: ${{ secrets.MY_SECRET_NAME }}
+      #     release-tag: v0.1
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset
+        env:
+          ${{ secrets.MY_SECRET_NAME }}
         with:
-          name: PlaneChase.love
-          path: ./PlaneChase.love
-      - uses: AButler/upload-release-assets@v2.0
-        with:
-          files: './PlaneChase.love'
-          repo-token: ${{ secrets.MY_SECRET_NAME }}
-          release-tag: v0.1
-          
+          upload_url: ${{ github.event.release.upload_url }} 
+          asset_path: ./PlaneChase.love
+          asset_name: PlaneChase.love
+          asset_content_type: application/x-love-game
