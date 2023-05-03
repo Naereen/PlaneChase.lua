@@ -1,12 +1,18 @@
 name: build-love-zip-file
-run-name: Build the PlaneChase.love file
+run-name: Build and upload the PlaneChase.love file
 on: [push]
 jobs:
   build-love-zip-file:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: love-actions/love-actions-core@v1
+      - name: Build core love package
+        uses: love-actions/love-actions-core@v1
         with:
           build-list:   ./LICENSE ./README.md ./DejaVuSans.ttf ./images/ ./conf.lua ./main.lua
-          package-path: ./package/PlaneChase.love
+          package-path: ./PlaneChase.love
+      - name: Upload core love package
+        uses: actions/upload-artifact@v3
+        with:
+          name: planechase_love_package
+          path: ./PlaneChase.love
