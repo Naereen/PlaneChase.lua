@@ -38,9 +38,23 @@ Ce mini projet nous a permis de progresser en Lua et en Löve2D, dans le cadre d
 
 ![PlaneChase_demo2.png](PlaneChase_demo2.png)
 
-- [ ] Traduire l'appli pour utiliser les images de plans en français ?
+## Objectifs bonus ?
+
+### Pour faire plaisir à Sam ?
+
+- [ ] Traduire l'appli pour utiliser les images de plans en français ? Malheureusement elles sont en mauvaise qualité, l'appli serait probablement inutilisable...
+
+### Pour apprendre les « GitHub actions » !
+
+- [ ] Configurer une GitHub action pour construire le .love automatiquement et le distribuer ici ? C'est en cours.
+
+[![build-love-zip-file](https://github.com/Naereen/PlaneChase.lua/actions/workflows/build-love-zip-file.yml/badge.svg)](https://github.com/Naereen/PlaneChase.lua/actions/workflows/build-love-zip-file.yml)
+
+- [ ] Configurer une GitHub action pour déployer le jeu dans sa version web (dossier [www/](www/)) à chaque commit, sans avoir à faire de `make build_lovejs` manuellement.
+
+- [ ] Configurer une GitHub action pour construire des "binaires" pour Linux (.AppImage), Mac et Windows, et les distribuer ici ? Ça semble plus dur, mais avec [ces GitHub actions](https://github.com/marketplace/actions/love-actions-for-linux) cela devrait être faisable.
 
 ## License ?
 
 [MIT Licensed](LICENSE)
-© Elliot & Lilian Besson (Naereen), 2023
+© [Elliot](https://github.com/Elliott005) & Lilian Besson (Naereen), 2023
