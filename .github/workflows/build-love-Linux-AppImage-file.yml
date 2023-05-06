@@ -23,10 +23,10 @@ jobs:
           # lib-path: ./lib
           # share-path: ./share
           build-deb: true
-          product-name: PlaneChase_app
+          product-name: PlaneChase
           output-folder: ./package/
-      - name: Upload core PlaneChase_app.AppImage as artefact below (for debug)
+      - name: Upload core PlaneChase.AppImage as artefact below (for debug)
         uses: actions/upload-artifact@v3
         with:
-          name: PlaneChase_app.AppImage
-          path: ./PlaneChase_app.AppImage
+          name: PlaneChase.AppImage
+          path: ./PlaneChase.AppImage
