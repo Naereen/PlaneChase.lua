@@ -1,0 +1,32 @@
+name: build-love-Linux-AppImage-file
+run-name: Build the PlaneChase.AppImage file
+on: [push]
+jobs:
+  build-love-Linux-AppImage-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the latest git version
+        uses: actions/checkout@v3
+      - name: Build core love package
+        uses: love-actions/love-actions-core@v1
+        with:
+          build-list:   ./LICENSE ./README.md ./DejaVuSans.ttf ./images/ ./conf.lua ./main.lua
+          package-path: ./package/PlaneChase.love
+      - uses: love-actions/love-actions-linux@v1
+        with:
+          app-name: PlaneChase
+          bundle-id: link.besson.planechase
+          description: Plane Chase for Magic the Gathering, by Elliot and Lilian
+          version-string: "0.1"
+          icon-path: ./.github/build/linux/dev/icon.png
+          love-package: ./package/PlaneChase.love
+          # lib-path: ./lib
+          # share-path: ./share
+          build-deb: true
+          product-name: PlaneChase_app
+          output-folder: ./package/
+      - name: Upload core PlaneChase_app.AppImage as artefact below (for debug)
+        uses: actions/upload-artifact@v3
+        with:
+          name: PlaneChase_app.AppImage
+          path: ./PlaneChase_app.AppImage

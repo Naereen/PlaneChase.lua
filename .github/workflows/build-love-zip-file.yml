@@ -17,18 +17,18 @@ jobs:
         with:
           name: PlaneChase.love
           path: ./PlaneChase.love
-      - name: Upload the PlaneChase.love file to latest release
-        uses: AButler/upload-release-assets@v2.0
-        with:
-          files: './PlaneChase.love'
-          repo-token: ${{ secrets.MY_SECRET_NAME }}
-          release-tag: v0.1
-      - name: Upload the PlaneChase.love file to latest release (bis)
-        uses: actions/upload-release-asset
-        env:
-          GITHUB_TOKEN: ${{ secrets.MY_SECRET_NAME }}
-        with:
-          upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ./PlaneChase.love
-          asset_name: PlaneChase.love
-          asset_content_type: application/x-love-game
+      # - name: Upload the PlaneChase.love file to latest release
+      #   uses: AButler/upload-release-assets@v2.0
+      #   with:
+      #     files: './PlaneChase.love'
+      #     repo-token: ${{ secrets.MY_SECRET_NAME }}
+      #     release-tag: v0.1
+      # - name: Upload the PlaneChase.love file to latest release (bis)
+      #   uses: actions/upload-release-asset
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.MY_SECRET_NAME }}
+      #   with:
+      #     upload_url: ${{ github.event.release.upload_url }}
+      #     asset_path: ./PlaneChase.love
+      #     asset_name: PlaneChase.love
+      #     asset_content_type: application/x-love-game
