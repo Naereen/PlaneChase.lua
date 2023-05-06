@@ -1,6 +1,6 @@
 name: build-love-Linux-AppImage-file
 run-name: Build the PlaneChase.AppImage file
-on: [push]
+on: [release]
 jobs:
   build-love-Linux-AppImage-file:
     runs-on: ubuntu-latest

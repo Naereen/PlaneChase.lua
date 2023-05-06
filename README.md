@@ -50,11 +50,13 @@ Ce mini projet nous a permis de progresser en Lua et en Löve2D, dans le cadre d
 
 [![build-love-zip-file](https://github.com/Naereen/PlaneChase.lua/actions/workflows/build-love-zip-file.yml/badge.svg)](https://github.com/Naereen/PlaneChase.lua/actions/workflows/build-love-zip-file.yml)
 
-- [ ] Configurer une GitHub action pour construire des "binaires" pour Linux (.AppImage), puis Mac et Windows (et Android et iOS ?), et les distribuer ici ? Ça semble plus dur, mais avec [ces GitHub actions](https://github.com/marketplace/actions/love-actions-for-linux) cela devrait être faisable.
+- [x] Configurer une GitHub action pour construire un "binaire" pour Linux (.AppImage), et le distribuer ici ? C'était un peu plus dur, mais avec [cette Action GitHub](https://github.com/marketplace/actions/love-actions-for-linux) ça va. Téléchargez le fichier `PlaneChase.AppImage.zip` et extrayez-le pour jouer sur votre ordinateur Linux, sans avoir besoin d'installer Lua ni Löve2D :
 
 [![build-love-Linux-AppImage-file](https://github.com/Naereen/PlaneChase.lua/actions/workflows/build-love-Linux-AppImage-file.yml/badge.svg)](https://github.com/Naereen/PlaneChase.lua/actions/workflows/build-love-Linux-AppImage-file.yml)
 
-- [ ] Configurer une GitHub action pour déployer le jeu dans sa version web (dossier [www/](www/)) à chaque nouvelle version (et pas chaque commit), sans avoir à faire de `make build_lovejs` manuellement. TODO: je ne sais pas faire ça.
+- [ ] Configurer une GitHub action pour construire des "binaires" pour Mac et Windows (et Android et iOS ?), et les distribuer ici ? Ça semble plus dur, mais avec [ces GitHub actions](https://github.com/marketplace/actions/love-actions-for-linux) cela devrait être faisable. Le problème avec la version Android est qu'elle publie directement l'appli `.apk` sur le Google Play Store... je préférerais la tester en local avant !
+
+- [ ] Configurer une GitHub action pour déployer le jeu dans sa version web (dossier [www/](www/)) à chaque nouvelle version (et pas chaque commit), sans avoir à faire de `make build_lovejs` manuellement. TODO: je ne sais pas faire ça, ça semble très dur de rentrer les mains dans le cambouis de `github-pages`.
 
 ## License ?
 
