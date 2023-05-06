@@ -46,13 +46,15 @@ Ce mini projet nous a permis de progresser en Lua et en Löve2D, dans le cadre d
 
 ### Pour apprendre les « GitHub actions » !
 
-- [ ] Configurer une GitHub action pour construire le .love automatiquement et le distribuer ici ? C'est en cours.
+- [x] Configurer une GitHub action pour construire le .love automatiquement et le distribuer ici ? C'est en cours. En cliquant sur ce badge on peut obtenir un "artefact" produit durant l'Action GitHub :
 
 [![build-love-zip-file](https://github.com/Naereen/PlaneChase.lua/actions/workflows/build-love-zip-file.yml/badge.svg)](https://github.com/Naereen/PlaneChase.lua/actions/workflows/build-love-zip-file.yml)
 
-- [ ] Configurer une GitHub action pour déployer le jeu dans sa version web (dossier [www/](www/)) à chaque nouvelle version (et pas chaque commit), sans avoir à faire de `make build_lovejs` manuellement.
+- [ ] Configurer une GitHub action pour construire des "binaires" pour Linux (.AppImage), puis Mac et Windows (et Android et iOS ?), et les distribuer ici ? Ça semble plus dur, mais avec [ces GitHub actions](https://github.com/marketplace/actions/love-actions-for-linux) cela devrait être faisable.
 
-- [ ] Configurer une GitHub action pour construire des "binaires" pour Linux (.AppImage), Mac et Windows (et Android et iOS ?), et les distribuer ici ? Ça semble plus dur, mais avec [ces GitHub actions](https://github.com/marketplace/actions/love-actions-for-linux) cela devrait être faisable.
+[![build-love-Linux-AppImage-file](https://github.com/Naereen/PlaneChase.lua/actions/workflows/build-love-Linux-AppImage-file.yml/badge.svg)](https://github.com/Naereen/PlaneChase.lua/actions/workflows/build-love-Linux-AppImage-file.yml)
+
+- [ ] Configurer une GitHub action pour déployer le jeu dans sa version web (dossier [www/](www/)) à chaque nouvelle version (et pas chaque commit), sans avoir à faire de `make build_lovejs` manuellement. TODO: je ne sais pas faire ça.
 
 ## License ?
 

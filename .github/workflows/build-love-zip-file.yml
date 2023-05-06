@@ -1,6 +1,6 @@
 name: build-love-zip-file
 run-name: Build and upload the PlaneChase.love file to latest release
-on: [push]
+on: [release]
 jobs:
   build-love-zip-file:
     runs-on: ubuntu-latest
