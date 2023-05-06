@@ -5,7 +5,8 @@ jobs:
   build-love-zip-file:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout the latest git version
+        uses: actions/checkout@v3
       - name: Build core love package
         uses: love-actions/love-actions-core@v1
         with:
@@ -25,7 +26,7 @@ jobs:
       - name: Upload the PlaneChase.love file to latest release (bis)
         uses: actions/upload-release-asset
         env:
-          ${{ secrets.MY_SECRET_NAME }}
+          GITHUB_TOKEN: ${{ secrets.MY_SECRET_NAME }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
           asset_path: ./PlaneChase.love

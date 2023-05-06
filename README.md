@@ -50,9 +50,9 @@ Ce mini projet nous a permis de progresser en Lua et en Löve2D, dans le cadre d
 
 [![build-love-zip-file](https://github.com/Naereen/PlaneChase.lua/actions/workflows/build-love-zip-file.yml/badge.svg)](https://github.com/Naereen/PlaneChase.lua/actions/workflows/build-love-zip-file.yml)
 
-- [ ] Configurer une GitHub action pour déployer le jeu dans sa version web (dossier [www/](www/)) à chaque commit, sans avoir à faire de `make build_lovejs` manuellement.
+- [ ] Configurer une GitHub action pour déployer le jeu dans sa version web (dossier [www/](www/)) à chaque nouvelle version (et pas chaque commit), sans avoir à faire de `make build_lovejs` manuellement.
 
-- [ ] Configurer une GitHub action pour construire des "binaires" pour Linux (.AppImage), Mac et Windows, et les distribuer ici ? Ça semble plus dur, mais avec [ces GitHub actions](https://github.com/marketplace/actions/love-actions-for-linux) cela devrait être faisable.
+- [ ] Configurer une GitHub action pour construire des "binaires" pour Linux (.AppImage), Mac et Windows (et Android et iOS ?), et les distribuer ici ? Ça semble plus dur, mais avec [ces GitHub actions](https://github.com/marketplace/actions/love-actions-for-linux) cela devrait être faisable.
 
 ## License ?
 
